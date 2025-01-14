@@ -13,7 +13,7 @@ public class BasicServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         System.out.println("인텔리제이 좋네!");
-        PrintWriter out = resp.getWriter();
+        req.getRequestDispatcher("/WEB-INF/test.jsp").forward(req, resp);
     }
 
     @Override
